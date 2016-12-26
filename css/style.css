@@ -1,0 +1,169 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+ margin: 0;
+ padding: 0;
+ border: 0;
+ font-size: 100%;
+ font: inherit;
+ vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+ display: block;
+}
+body {
+ line-height: 1;
+ font-family: Microsoft JhengHei;
+ color: #3D1101;
+}
+ol, ul {
+ list-style: none;
+}
+blockquote, q {
+ quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+ content: '';
+ content: none;
+}
+table {
+ border-collapse: collapse;
+ border-spacing: 0;
+}
+*,*:before,*:after {
+ box-sizing: border-box;
+}
+
+img {
+ max-width: 100%;
+ height: auto;
+} 
+@import url('https://fonts.googleapis.com/css?family=Courgette');
+/*start*/
+html, body {
+  background: url(../images/bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.container {
+    width: 100%;
+    padding: 50px 0;
+    margin: 30px 0 10px 0;
+    background: rgba(100, 96, 97, 0.6);
+}
+
+.container h1 {
+  font-family: 'Courgette', cursive;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+}
+
+.container p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 40px 0;
+    color: white;
+}
+
+.form-login {
+    background:#B4ACAE;
+    max-width: 320px;
+    margin: 0 auto;
+    box-shadow: 3px 3px 5px black;
+    border-top: 3px solid #FF5E45;
+    padding: 15px;
+}
+
+.form-login h3 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-login .pure-form-stacked .input-form {
+    width: 100%;
+    border: 1px solid gray;
+    margin: 8px 0;
+}
+
+.form-login .pure-form-stacked #account {
+    margin-bottom: 1.2em;
+    background: url(../images/account.png) no-repeat;
+    background-position: 7px center;
+    padding-left:30px;
+    background-color: white;
+}
+
+.form-login .pure-form-stacked #password {
+    background: url(../images/lock.png) no-repeat;
+    background-position: 7px center;
+    padding-left: 30px;
+    background-color: white;
+}
+
+#space {
+  font-size: 16px;
+  margin-bottom: 1.2em;
+}
+
+.press {
+    width: 100%;
+    padding: 10px 30px;
+    background:#FF5E45;
+    border:1px solid #FF5E45;
+    border-radius: 5px;
+    box-shadow: 2px 3px 3px gray;
+    color: white;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+.press:hover {
+    background: #AE471B;
+    border:1px solid #AE471B;
+}
+.press:active {
+  transform: translateY(2px);
+  box-shadow: 2px 1px 3px gray;
+}
+
+/* RWD:414px input & button放大*/
+@media(max-width: 414px) {
+ .form-login .pure-form-stacked .input-form {
+   height: 40px;
+  }  
+}
+
+.footer {
+  text-align: center;
+  color: black;
+}

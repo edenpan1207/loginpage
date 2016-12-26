@@ -1,0 +1,380 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+ margin: 0;
+ padding: 0;
+ border: 0;
+ font-size: 100%;
+ font: inherit;
+ vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+ display: block;
+}
+body {
+ line-height: 1;
+ font-family: Microsoft JhengHei;
+ color: #3D1101;
+}
+ol, ul {
+ list-style: none;
+}
+blockquote, q {
+ quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+ content: '';
+ content: none;
+}
+table {
+ border-collapse: collapse;
+ border-spacing: 0;
+}
+*,*:before,*:after {
+ box-sizing: border-box;
+}
+
+img {
+ max-width: 100%;
+ height: auto;
+} /*自適應圖片*/
+
+/*start*/
+
+.wrap {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.header {
+    height: 420px;
+    background-image: url(../images/header_desktop.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+/*RWD:568px*/
+
+@media(max-width:568px) {
+  .header {
+    background-image: url(../images/header_mobile.png);
+  }
+}
+
+
+/*topmenu*/
+
+.topmenu {
+    position: relative;
+}
+
+.topmenu h1 {
+    color: white;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 15px 3%;
+    cursor: pointer;
+}
+
+.topmenu ul {
+    float: right;
+    margin-right: 3%;
+}
+
+.topmenu ul li {
+    float: left;
+}
+
+.topmenu ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: white;
+}
+
+.topmenu ul li a:hover {
+  color: #3D1101;
+  background: gray;
+}
+
+.fa-bars {
+  display: none;
+}
+
+/*RWD:568px*/
+
+@media (max-width:568px){
+  .topmenu ul {
+    max-height: 0;
+    overflow: hidden;
+    z-index: 100;
+    transition: max-height 1.5s;
+    position: absolute;
+    margin-top: 1px;
+    top: 57px;
+    right: 0;
+    left: 0;
+    background: #73655F;
+  }
+  
+  .topmenu ul li {
+    float:none;
+    border-bottom:2px solid black;
+  }
+  .fa-bars {
+    display: block;
+    float: right;
+    margin: 3% 3% 0 0;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .open-menu .topmenu ul {
+    max-height: 200px;
+  }
+}
+
+
+/*大圖文字*/
+
+.screen {
+    width: 60%;
+    padding: 2em;
+    background: rgba(0, 0, 0, 0.35);
+    margin: 80px auto;
+    text-align: center;
+}
+
+.screen h2 {
+    font-size: 24px;
+    color: #fff;
+    margin: 0 0 1em 0;
+}
+
+.screen p {
+    color: #fff;
+    line-height: 1.5em;
+}
+.fa-cutlery {
+  margin: 0 5px;
+}
+
+/*RWD:414px*/
+@media(max-width:414px) {
+  .screen {
+    width: 90%;
+    padding: 1.5em 0;
+  }
+  .screen h2 {
+    font-size: 36px;
+  }
+  .screen h2 span {
+    display:block;
+  }
+}
+
+/*content*/
+
+.content {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #E8E8E8;
+}
+
+.content h2 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.content p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 40px 0;
+}
+
+
+.form-login {
+    max-width: 320px;
+    margin: 0 auto;
+    box-shadow: 3px 3px 10px gray;
+    border-top: 3px solid #FF5E45;
+    padding: 15px;
+}
+
+.form-login h3 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-login .pure-form-stacked .input-form {
+    width: 100%;
+}
+
+.form-login .pure-form-stacked #email {
+    margin-bottom: 1.2em;
+    background: url(../images/mail.png) no-repeat;
+    background-position: 7px center;
+    padding-left:30px;
+    background-color: white;
+}
+
+.form-login .pure-form-stacked #password {
+    background: url(../images/lock.png) no-repeat;
+    background-position: 7px center;
+    padding-left: 30px;
+    background-color: white;
+}
+
+.form-login .pure-form-stacked span {
+    display: block;
+    font-size: 14px;
+    color:#FF5E45;
+    margin-bottom: 1.2em;
+}
+
+.bt1 {
+    width: 45%;
+    padding: 10px 45px;
+    background: #CBC9C9;
+    border:1px solid #CBC9C9;
+    border-radius: 5px;
+    margin-right: 20px;
+    color: white;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+.bt1:hover {
+    background: #837975;
+    border:1px solid #837975;
+}
+
+.bt2 {
+    width: 45%;
+    padding: 10px 45px;
+    background:#FF5E45;
+    border:1px solid #FF5E45;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+.bt2:hover {
+    background: #AE471B;
+    border:1px solid #AE471B;
+}
+
+/* RWD:414px input & button放大*/
+@media(max-width: 414px) {
+ .form-login .pure-form-stacked .input-form {
+   height: 40px;
+  }
+  .bt1, .bt2 {
+    width: 100%;
+  }   
+}
+
+
+/*footer*/
+
+.footer {
+  background: #E8E8E8;
+  padding-top: 1%; 
+  padding-bottom: 18%;
+}
+.menu-inform {
+    width: 60%;
+    float: left;
+    margin-left: 3%;
+    margin-top: 3%;
+    line-height: 1.2em;
+}
+
+.menu-inform > li {
+    float: left;
+    width: 40%;
+    margin-right: 3%;
+}
+
+.menu-inform > li h6{
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.menu-inform li ul {
+  list-style: disc;
+  margin-left: 8%;
+}
+
+.logo-bottom {
+    margin-top: 3%;
+    margin-right: 3%;
+    float:right;
+}
+
+.logo-bottom a {
+    text-decoration: none;
+    display: block;
+    font-size: 45px;
+    font-weight: bold;
+    color: brown;
+    margin-bottom: 10px;
+}
+.menu-icon {
+  float: right;
+}
+.menu-icon li {
+    float: left;
+    border-left: 10px solid #F4F3F3;
+    margin-right: 5px;
+}
+.menu-icon li img {
+    border-radius: 5px;
+}
+
+/* RWD:768px*/
+@media(max-width:768px){
+  .footer {
+    padding-bottom: 25%;
+  }
+}
+
+/*RWD:710px footer斷點防止跑版*/
+@media(max-width:710px) {
+  .footer {
+    padding-bottom: 150px;
+  }
+  .menu-inform {
+    width: 90%;
+    float: none;
+  }
+  .menu-inform > li {
+    float: none;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
