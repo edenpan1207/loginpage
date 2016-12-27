@@ -22,7 +22,7 @@ function submitAnswers(){
     b.style.border = '1px solid red';
     a.style.border = '1px solid gray';
   } 
-  
+
   return false;
 }
 
