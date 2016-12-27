@@ -1,4 +1,4 @@
-function submitAnswers(){
+function setFeedback(){
   
   var a = document.getElementById('account');
   var b = document.getElementById('password');
